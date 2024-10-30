@@ -1,2 +1,2 @@
 # squareProject
-This repo is related to Square project. Which has been created using the HTML, CSS, and JavaScript.
+This repository is related to the Square project, which was created using HTML, CSS, and JavaScript.
