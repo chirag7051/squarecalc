@@ -2,9 +2,10 @@ body {
     background-color: #00008B;
 }
 
+/* Base font sizes for mobile screens */
 h1 {
     color: #FFFFFF;
-    font-size: 50px;
+    font-size: 2rem; /* Default size for smaller screens */
     font-family: sans-serif;
     text-align: center;
     padding: 5px;
@@ -13,7 +14,7 @@ h1 {
 
 label {
     color: #FFFDD0;
-    font-size: 20px;
+    font-size: 1rem; /* Default size for smaller screens */
     font-family: sans-serif;
 }
 
@@ -33,6 +34,51 @@ label {
     background-color: #fff;
     color: #000;
     text-align: left;
-    font-size: 30px;
+    font-size: 1.5rem; /* Default size for smaller screens */
     font-family: sans-serif;
+}
+
+/* Medium devices (tablets, iPads) */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    label {
+        font-size: 1.125rem;
+    }
+
+    .printResult {
+        font-size: 1.75rem;
+    }
+}
+
+/* Large devices (laptops, desktops) */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    label {
+        font-size: 1.25rem;
+    }
+
+    .printResult {
+        font-size: 2rem;
+    }
+}
+
+/* Extra-large devices (large desktops, MacBooks) */
+@media (min-width: 1440px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    label {
+        font-size: 1.5rem;
+    }
+
+    .printResult {
+        font-size: 2.25rem;
+    }
 }
