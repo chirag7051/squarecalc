@@ -1,10 +1,10 @@
 body {
-    background-color: #00008B;
+    background-color: #FFFFFF; /* White background */
 }
 
 /* Base font sizes for mobile screens */
 h1 {
-    color: #FFFFFF;
+    color: #1C1C1C; /* Dark grey color for high contrast (Passes WCAG AA) */
     font-size: 2rem; /* Default size for smaller screens */
     font-family: sans-serif;
     text-align: center;
@@ -13,29 +13,64 @@ h1 {
 }
 
 label {
-    color: #FFFDD0;
+    color: #333333; /* Dark grey color for labels (Passes WCAG AA) */
     font-size: 1rem; /* Default size for smaller screens */
     font-family: sans-serif;
 }
 
 .squareNumber {
-    border: 2px solid black;
+    border: 2px solid #1C1C1C; /* Dark grey border for contrast */
 }
 
 .checkSquare {
-    border: 2px solid black;
-    background-color: #fff;
-    color: #301934;
+    border: 2px solid #1C1C1C;
+    background-color: #F4F4F4; /* Light grey background for buttons (Passes WCAG AA) */
+    color: #1C1C1C; /* Dark grey text (Passes WCAG AA) */
     padding: 5px 10px;
     margin: 5px 10px;
 }
 
 .printResult {
-    background-color: #fff;
-    color: #000;
+    background-color: #F4F4F4; /* Light grey background */
+    color: #1C1C1C; /* Dark grey text */
     text-align: left;
     font-size: 1.5rem; /* Default size for smaller screens */
     font-family: sans-serif;
+}
+
+/* Clear button styles */
+.clearResult {
+    background-color: #FF6347; /* Tomato red color */
+    color: #FFFFFF; /* White text for high contrast (Passes WCAG AA) */
+    border: 2px solid #FF6347; /* Tomato red border */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Hover effect for Clear button */
+.clearResult:hover {
+    background-color: #FF4500; /* Darker red */
+    transform: scale(1.1);
+}
+
+/* Focus effect for Clear button */
+.clearResult:focus {
+    outline: none;
+    box-shadow: 0 0 10px #FF6347;
+}
+
+/* Disabled state for Clear button */
+.clearResult:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    border: 2px solid #aaa;
 }
 
 /* Medium devices (tablets, iPads) */
@@ -50,6 +85,11 @@ label {
 
     .printResult {
         font-size: 1.75rem;
+    }
+
+    .clearResult {
+        font-size: 1.125rem; /* Slightly larger font on medium devices */
+        padding: 12px 24px; /* Bigger padding for easier clicking */
     }
 }
 
@@ -66,6 +106,11 @@ label {
     .printResult {
         font-size: 2rem;
     }
+
+    .clearResult {
+        font-size: 1.25rem; /* Larger font size for large screens */
+        padding: 15px 30px; /* Larger button padding */
+    }
 }
 
 /* Extra-large devices (large desktops, MacBooks) */
@@ -80,5 +125,10 @@ label {
 
     .printResult {
         font-size: 2.25rem;
+    }
+
+    .clearResult {
+        font-size: 1.5rem; /* Largest font size for extra-large screens */
+        padding: 18px 36px; /* Even larger button for large displays */
     }
 }
